@@ -26,7 +26,8 @@
     // Private properties
     var _options = {
       url: '/favicon.ico',
-      color: '#eb361e'
+      color: '#eb361e',
+      lineColor: '#ffffff'
     };
     var _generatedFavicon;
     var _iconElement;
@@ -51,7 +52,7 @@
       head.appendChild(_iconElement);
     };
 
-    var _generateIcon = function(src, color, cb) {
+    var _generateIcon = function(src, color, lineColor, cb) {
       var img = document.createElement('img');
       img.src = src;
 
@@ -70,7 +71,7 @@
         var radius = img.width / 4.5;
 
         context.fillStyle = color;
-        context.strokeStyle = '#FFFFFF';
+        context.strokeStyle = lineColor;
         context.lineWidth = lineWidth;
 
         context.beginPath();
@@ -91,7 +92,7 @@
           });
         }
 
-        _generateIcon(_options.url, _options.color, function(err, url){
+        _generateIcon(_options.url, _options.color, _options.lineColor, function(err, url){
           _generatedFavicon = url;
         });
 
