@@ -7,21 +7,24 @@ jQuery(document).ready(function($) {
   $('.btn-github').bind('click', function(e) {
     FaviconNotification.init({
       url: 'favicons/github.ico',
-      color: '#41a6cc'
+      color: '#41a6cc',
+      lineColor: '#77c7e6'
     });
   });
 
   $('.btn-stack-overflow').bind('click', function(e) {
     FaviconNotification.init({
       url: 'favicons/stackoverflow.ico',
-      color: '#00c96f'
+      color: '#00c96f',
+      lineColor: '#70f0b7'
     });
   });
 
   $('.btn-google').bind('click', function(e) {
     FaviconNotification.init({
       url: 'favicons/google.ico',
-      color: '#ffc700'
+      color: '#ffc700',
+      lineColor: '#feecad'
     });
   });
 
