@@ -1,6 +1,6 @@
 {
   "name": "favicon-notification",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A small script to add notification bubble to favicon",
   "main": "src/index.js",
   "scripts": {
@@ -11,6 +11,14 @@
     "notification",
     "bubble"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igorprado/react-notification-system"
+  },
+  "bugs": {
+    "url": "https://github.com/igorprado/react-notification-system/issues"
+  },
+  "homepage": "https://github.com/igorprado/react-notification-system",
   "author": "Igor Prado",
   "license": "MIT"
 }
