@@ -7,13 +7,28 @@ If you don't have a nice favicon set on app, read this: [https://github.com/audr
 
 ## Installing
 
-Install using NPM:
+### NPM:
+
+Run:
 
 ```
-npm install favicon-notification --save
+npm install favicon-notification
 ```
+
+### Bower
+
+Run
+
+```
+bower install favicon-notification
+```
+
 
 ## Using
+
+### NPM
+
+If you are using Webpack or Browserify, do:
 
 ```js
 var FaviconNotification = require('favicon-notification');
@@ -28,6 +43,46 @@ FaviconNotification.add();
 
 // If you want to remove the notification
 FaviconNotification.remove();
+
+```
+
+### AMD
+
+If you are using RequireJS, for example, load normally (remeber to set the alias in your RequireJS config):
+
+```js
+define(['FaviconNotification'], function(FaviconNotification){
+  // When your app loads
+  FaviconNotification.init({
+    color: '#000000'
+  });
+
+  // On some event
+  FaviconNotification.add();
+
+  // If you want to remove the notification
+  FaviconNotification.remove();
+});
+```
+
+### Bower
+
+Load the script file:
+```html
+<script src="./bower_components/favicon-notification/dist/favicon-notification.min.js"></script>
+
+<script>
+// When your app loads
+FaviconNotification.init({
+  color: '#000000'
+});
+
+// On some event
+FaviconNotification.add();
+
+// If you want to remove the notification
+FaviconNotification.remove();
+</script>
 ```
 
 ## Methods
