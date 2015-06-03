@@ -56,6 +56,7 @@
       img.src = src;
 
       img.onload = function() {
+        var lineWidth = 2;
         var canvas = document.createElement('canvas');
         canvas.width = img.width;
         canvas.height = img.height;
@@ -64,16 +65,19 @@
         context.clearRect(0, 0, img.width, img.height);
         context.drawImage(img, 0, 0);
 
-        var centerX = img.width - (img.width / 4);
-        var centerY = img.height - (img.height / 4);
-        var radius = img.width / 4;
+        var centerX = img.width - (img.width / 4.5) - lineWidth;
+        var centerY = img.height - (img.height / 4.5) - lineWidth;
+        var radius = img.width / 4.5;
 
         context.fillStyle = color;
+        context.strokeStyle = '#FFFFFF';
+        context.lineWidth = lineWidth;
 
         context.beginPath();
         context.arc(centerX, centerY, radius, 0, Math.PI * 2, false);
         context.closePath();
         context.fill();
+        context.stroke();
 
         cb(null, context.canvas.toDataURL());
       };
