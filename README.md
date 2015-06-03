@@ -3,11 +3,11 @@
 
 ## Favicon
 
-If you don't have a nice favicon set on app, I suggest see this doc: https://github.com/audreyr/favicon-cheat-sheet
+If you don't have a nice favicon set on app, read this: [https://github.com/audreyr/favicon-cheat-sheet](https://github.com/audreyr/favicon-cheat-sheet)
 
 ## Installing
 
-Install through NPM:
+Install using NPM:
 
 ```
 npm install favicon-notification --save
