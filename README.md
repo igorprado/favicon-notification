@@ -89,12 +89,13 @@ FaviconNotification.remove();
 
 ## .init(options)
 
-This script assumes that you have a `/favicon.ico` set. [See how setup your favicon](https://github.com/audreyr/favicon-cheat-sheet). If are you using another path to your favicon, you can set it by passing some options to this method. You can set a different color too (default is red).
+This script assumes that you have a `/favicon.ico` set. [See how setup your favicon](https://github.com/audreyr/favicon-cheat-sheet). If are you using another path to your favicon, you can set it by passing some options to this method. You can set a different fill and line color too (defaults are fill red and white line).
 
 ```js
 FaviconNotification.init({
   url: '/path/to/favicon.ico',
-  color: '#FFFFFF'
+  color: '#FFFFFF',
+  lineColor: '#000000'
 });
 ```
 
