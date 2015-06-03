@@ -4,7 +4,11 @@
   "description": "A small script to add notification bubble to favicon",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run minify & npm run copy",
+    "minify": "uglifyjs src/index.js -cm -o dist/favicon-notification.min.js -r 'require,exports,define'",
+    "copy": "cp src/index.js dist/favicon-notification.js",
+    "bower": "bower register favicon-notification git://github.com/igorprado/favicon-notification.git"
   },
   "keywords": [
     "favicon",
@@ -22,6 +26,6 @@
   "author": "Igor Prado",
   "license": "MIT",
   "devDependencies": {
-    "urequire": "^0.7.0-beta.15"
+    "uglify-js": "^2.4.23"
   }
 }

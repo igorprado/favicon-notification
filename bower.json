@@ -6,7 +6,7 @@
     "Igor Prado <igorprado@gmail.com>"
   ],
   "description": "A small script to add notification bubble to favicon",
-  "main": "src/index.js",
+  "main": "dist/favicon-notification.js",
   "moduleType": [
     "amd",
     "globals",
