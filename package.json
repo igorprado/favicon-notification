@@ -1,0 +1,16 @@
+{
+  "name": "favicon-notification",
+  "version": "0.0.1",
+  "description": "A small script to add notification bubble to favicon",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "favicon",
+    "notification",
+    "bubble"
+  ],
+  "author": "Igor Prado",
+  "license": "MIT"
+}
