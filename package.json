@@ -20,5 +20,8 @@
   },
   "homepage": "https://github.com/igorprado/react-notification-system",
   "author": "Igor Prado",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "urequire": "^0.7.0-beta.15"
+  }
 }
