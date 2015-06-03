@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
   $('.btn-google').bind('click', function(e) {
     FaviconNotification.init({
       url: 'favicons/google.ico',
-      color: '#FFFFFF'
+      color: '#ffc700'
     });
   });
 
