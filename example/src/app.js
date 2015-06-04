@@ -2,11 +2,9 @@ var jQuery = require('jquery');
 var FaviconNotification = require('favicon-notification');
 
 jQuery(document).ready(function($) {
-  FaviconNotification.add();
-
-  // FaviconNotification.init({
-  //   url: 'favicons/github.ico'
-  // });
+  FaviconNotification.init({
+    url: 'favicons/github.ico'
+  });
 
   $('.btn-github').bind('click', function(e) {
     FaviconNotification.init({
