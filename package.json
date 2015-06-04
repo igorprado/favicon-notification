@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run minify & npm run copy",
     "minify": "uglifyjs src/index.js -cm -o dist/favicon-notification.min.js -r 'require,exports,define'",
-    "copy": "cp src/index.js dist/favicon-notification.js",
-    "bower": "bower register favicon-notification git://github.com/igorprado/favicon-notification.git"
+    "copy": "cp src/index.js dist/favicon-notification.js"
   },
   "keywords": [
     "favicon",
