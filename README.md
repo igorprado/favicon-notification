@@ -1,5 +1,5 @@
 # Favicon Notification
-#### A small script to add notification bubble to favicon
+#### A small script (~ 1.4kB minified) to add notification bubble to favicon
 
 ## Demo
 
