@@ -24,10 +24,14 @@
     }
 
     // Private properties
-    var _options = {
+    var _options = {};
+
+    var _defaults = {
       url: '/favicon.ico',
-      color: '#eb361e'
+      color: '#eb361e',
+      lineColor: '#ffffff'
     };
+
     var _generatedFavicon;
     var _iconElement;
 
@@ -51,11 +55,12 @@
       head.appendChild(_iconElement);
     };
 
-    var _generateIcon = function(src, color, cb) {
+    var _generateIcon = function(cb) {
       var img = document.createElement('img');
-      img.src = src;
+      img.src = _options.url;
 
       img.onload = function() {
+        var lineWidth = 2;
         var canvas = document.createElement('canvas');
         canvas.width = img.width;
         canvas.height = img.height;
@@ -64,30 +69,43 @@
         context.clearRect(0, 0, img.width, img.height);
         context.drawImage(img, 0, 0);
 
-        var centerX = img.width - (img.width / 4);
-        var centerY = img.height - (img.height / 4);
-        var radius = img.width / 4;
+        var centerX = img.width - (img.width / 4.5) - lineWidth;
+        var centerY = img.height - (img.height / 4.5) - lineWidth;
+        var radius = img.width / 4.5;
 
-        context.fillStyle = color;
+        context.fillStyle = _options.color;
+        context.strokeStyle = _options.lineColor;
+        context.lineWidth = lineWidth;
 
         context.beginPath();
         context.arc(centerX, centerY, radius, 0, Math.PI * 2, false);
         context.closePath();
         context.fill();
+        context.stroke();
 
         cb(null, context.canvas.toDataURL());
       };
     };
 
+    var _setOptions = function(options) {
+      if (!options) {
+        _options = _defaults;
+        return;
+      }
+
+      _options = {};
+
+      for(var key in _defaults){
+           _options[key] = options.hasOwnProperty(key) ? options[key] : _defaults[key];
+      }
+    };
+
     var FaviconNotification = {
       init: function(options) {
-        if (options) {
-          Object.keys(options).map(function(option){
-            _options[option] = options[option];
-          });
-        }
 
-        _generateIcon(_options.url, _options.color, function(err, url){
+        _setOptions(options);
+
+        _generateIcon(function(err, url){
           _generatedFavicon = url;
         });
 
@@ -97,7 +115,8 @@
 
       add: function() {
         if (!_generatedFavicon && !_iconElement) {
-          _generateIcon(_options.url, _options.color, function(err, url) {
+          _setOptions();
+          _generateIcon(function(err, url) {
             _generatedFavicon = url;
             _addFavicon(url);
           });
