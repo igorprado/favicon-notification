@@ -105,7 +105,7 @@ FaviconNotification.init({
 
 ## .add()
 
-As the name says, this add the notification bubble to the favicon. If you didn't initialized the script, this will use the default options to create and set the new favicon.
+As the name says, this add the notification bubble to the favicon. If you didn't initialized the script using `.init(options)`, this will use the default options to create and set the new favicon with the notification.
 
 ```js
 FaviconNotification.add();
