@@ -1,6 +1,10 @@
 # Favicon Notification
 #### A small script to add notification bubble to favicon
 
+## Demo
+
+* [http://igorprado.github.io/favicon-notification](http://igorprado.github.io/favicon-notification)
+
 ## Favicon
 
 If you don't have a nice favicon set on app, read this: [https://github.com/audreyr/favicon-cheat-sheet](https://github.com/audreyr/favicon-cheat-sheet)
