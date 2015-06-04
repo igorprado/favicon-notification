@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/igorprado/react-notification-system"
+    "url": "https://github.com/igorprado/favicon-notification"
   },
   "bugs": {
-    "url": "https://github.com/igorprado/react-notification-system/issues"
+    "url": "https://github.com/igorprado/favicon-notification/issues"
   },
-  "homepage": "https://github.com/igorprado/react-notification-system",
+  "homepage": "https://github.com/igorprado/favicon-notification",
   "author": "Igor Prado",
   "license": "MIT",
   "devDependencies": {
