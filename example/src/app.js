@@ -2,13 +2,15 @@ var jQuery = require('jquery');
 var FaviconNotification = require('favicon-notification');
 
 jQuery(document).ready(function($) {
-  FaviconNotification.init();
+  FaviconNotification.add();
+
+  // FaviconNotification.init({
+  //   url: 'favicons/github.ico'
+  // });
 
   $('.btn-github').bind('click', function(e) {
     FaviconNotification.init({
-      url: 'favicons/github.ico',
-      color: '#41a6cc',
-      lineColor: '#77c7e6'
+      url: 'favicons/github.ico'
     });
   });
 
