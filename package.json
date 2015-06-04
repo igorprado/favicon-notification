@@ -1,6 +1,6 @@
 {
   "name": "favicon-notification",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A small script to add notification bubble to favicon",
   "main": "src/index.js",
   "scripts": {
