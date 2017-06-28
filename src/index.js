@@ -114,7 +114,7 @@
       },
 
       add: function() {
-        if (!_generatedFavicon && !_iconElement) {
+        if (!_generatedFavicon || !_iconElement) {
           _setOptions();
           _generateIcon(function(err, url) {
             _generatedFavicon = url;
