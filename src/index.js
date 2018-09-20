@@ -29,7 +29,9 @@
     var _defaults = {
       url: '/favicon.ico',
       color: '#eb361e',
-      lineColor: '#ffffff'
+      lineColor: '#ffffff',
+      bottom: 0,
+      right: 0
     };
 
     var _generatedFavicon;
@@ -69,8 +71,8 @@
         context.clearRect(0, 0, img.width, img.height);
         context.drawImage(img, 0, 0);
 
-        var centerX = img.width - (img.width / 4.5) - lineWidth;
-        var centerY = img.height - (img.height / 4.5) - lineWidth;
+        var centerX = img.width - (img.width / 4.5) - lineWidth + _options.right;
+        var centerY = img.height - (img.height / 4.5) - lineWidth + _options.bottom;
         var radius = img.width / 4.5;
 
         context.fillStyle = _options.color;

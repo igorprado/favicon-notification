@@ -99,7 +99,9 @@ This script assumes that you have a `/favicon.ico` set. [See how setup your favi
 FaviconNotification.init({
   url: '/path/to/favicon.ico',
   color: '#FFFFFF',
-  lineColor: '#000000'
+  lineColor: '#000000',
+  bottom: 0,
+  right: 0
 });
 ```
 
